@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #products{
+      display: grid;
+      grid-gap: 10px;
+      width: 50%;
+      margin: auto;
+    }
+    #navbar>button{
+      display: block;
+      margin: auto;
+      padding: 10px 20px 10px 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border-color:rgba(128, 128, 128, 0.877);
+
+    }
+    h2{
+      text-align: center;
+    }
+    #add_product{
+      display: block;
+      margin: auto;
+      padding: 10px 20px 10px 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border-color:rgba(0, 0, 255, 0.336);
+
+    }
+    input{
+      padding: 10px 20px 10px 20px;
+      border-radius: 10px;
+      border-color:rgba(0, 0, 0, 0.445);
+      margin-bottom: 20px;
+    }
+    a{
+      text-decoration: none;
+    }
+  </style> 
+
+  <body>
+    <div id="navbar">
+      <!--Create Show Products button here, give id as "show_products". avoid making spelling mistakes in HTML id's-->
+      <button id="show_products">
+      <a href="inventory.html"> Show Products</button></a>
+    </div>
+    <div>
+      <h2>Add Products</h2>
+      <!--Create a form here to accept product data from user, give form HTML id as "products"-->
+
+      <!--Create four inputs to accept Type, Description, price, & image-->
+      <!--give the inputs following respective id's, "type", "desc", "price","image"-->
+      <!--create a "Add Product" button to submit form, give it html id as "add_product"-->
+      <form id="products" onsubmit="storeData(event)">
+        <input type="text" placeholder="Type" id="type">
+        <input type="text" placeholder="Description" id="desc">
+        <input type="number" placeholder="Price" id="price">
+        <input type="url" placeholder="Enter Image url" id="image">
+        <button id="add_product">Add Product</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script src="./scripts/index.js"></script>
